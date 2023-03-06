@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ChatApp</string>
     <string name="no_internet">Подключение отсутствует</string>
+    <string name="authorization">Авторизация</string>
+    <string name="all_chats">Все чаты</string>
+    <string name="settings">Настройки</string>
 </resources>
