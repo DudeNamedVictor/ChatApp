@@ -5,7 +5,6 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
 import com.example.chatapp.R
 import com.example.chatapp.databinding.CustomToolbarLayoutBinding
 
@@ -31,21 +30,29 @@ class CustomToolbar(
     ) {
         when (toolbarType) {
             ToolbarType.AUTHORIZATION -> {
-                binding.leftIcon.isVisible = false
-                binding.rightIcon.isVisible = false
                 binding.title.setText(R.string.authorization)
             }
             ToolbarType.ALL_CHATS -> {
                 binding.leftIcon.setImageDrawable(ContextCompat.getDrawable(context,
                     R.drawable.ic_baseline_search_32))
+                binding.rightIcon.setImageDrawable(ContextCompat.getDrawable(context,
+                    R.drawable.ic_baseline_settings_32))
                 binding.title.setText(R.string.all_chats)
             }
             ToolbarType.CURRENT_CHAT -> {
+                binding.leftIcon.setImageDrawable(ContextCompat.getDrawable(context,
+                    R.drawable.ic_baseline_arrow_back_32))
                 binding.title.text = title
             }
             ToolbarType.SETTINGS -> {
-                binding.rightIcon.isVisible = false
+                binding.leftIcon.setImageDrawable(ContextCompat.getDrawable(context,
+                    R.drawable.ic_baseline_arrow_back_32))
                 binding.title.setText(R.string.settings)
+            }
+            ToolbarType.SEARCH -> {
+                binding.leftIcon.setImageDrawable(ContextCompat.getDrawable(context,
+                    R.drawable.ic_baseline_arrow_back_32))
+                binding.title.setText(R.string.search)
             }
         }
 
@@ -58,7 +65,7 @@ class CustomToolbar(
     }
 
     enum class ToolbarType {
-        AUTHORIZATION, ALL_CHATS, CURRENT_CHAT, SETTINGS
+        AUTHORIZATION, ALL_CHATS, CURRENT_CHAT, SETTINGS, SEARCH
     }
 
 }

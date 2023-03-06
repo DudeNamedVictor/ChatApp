@@ -18,9 +18,24 @@
     <fragment
         android:id="@+id/allChatsFragment"
         android:name="com.example.chatapp.ui.allchats.AllChatsFragment"
-        android:label="AllChatsFragment" />
+        android:label="AllChatsFragment" >
+        <action
+            android:id="@+id/action_allChatsFragment_to_searchUserFragment"
+            app:destination="@id/searchUserFragment" />
+        <action
+            android:id="@+id/action_allChatsFragment_to_globalSettingsFragment"
+            app:destination="@id/globalSettingsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/authorizationFragment"
         android:name="com.example.chatapp.ui.authorization.AuthorizationFragment"
         android:label="AuthorizationFragment" />
+    <fragment
+        android:id="@+id/searchUserFragment"
+        android:name="com.example.chatapp.ui.searchuser.SearchUserFragment"
+        android:label="SearchUserFragment" />
+    <fragment
+        android:id="@+id/globalSettingsFragment"
+        android:name="com.example.chatapp.ui.globalsettings.GlobalSettingsFragment"
+        android:label="GlobalSettingsFragment" />
 </navigation>

@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.chatapp.R
 import com.example.chatapp.databinding.AllChatsFragmentLayoutBinding
 import com.example.chatapp.ui.views.CustomToolbar
 
@@ -28,12 +30,11 @@ class AllChatsFragment : Fragment() {
     private fun initToolbar() {
         binding.toolbar.populate(
             toolbarType = CustomToolbar.ToolbarType.ALL_CHATS,
-            title = null,
             onLeftIconClick = {
-
+                findNavController().navigate(R.id.action_allChatsFragment_to_searchUserFragment)
             },
             onRightIconClick = {
-
+                findNavController().navigate(R.id.action_allChatsFragment_to_globalSettingsFragment)
             })
     }
 
