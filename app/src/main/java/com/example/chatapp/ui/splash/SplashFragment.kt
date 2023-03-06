@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.example.chatapp.R
 import com.example.chatapp.databinding.SplashFragmentLayoutBinding
 
 class SplashFragment : Fragment() {
@@ -31,10 +33,10 @@ class SplashFragment : Fragment() {
         viewModel.stateMLD.observe(viewLifecycleOwner) {
             when (it) {
                 SplashViewModel.SplashScreenState.LoginSuccess -> {
-                    // todo: переход на экран чатов
+                    findNavController().navigate(R.id.action_splashFragment_to_allChatsFragment)
                 }
                 SplashViewModel.SplashScreenState.LoginFailed -> {
-                    // todo: переход на экран логина
+                    findNavController().navigate(R.id.action_splashFragment_to_authorizationFragment)
                 }
             }
         }
