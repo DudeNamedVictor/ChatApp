@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.chatapp.databinding.SearchUserLayoutBinding
-import com.example.chatapp.ui.views.CustomToolbar
 
 class SearchUserFragment : Fragment() {
 
@@ -32,11 +31,9 @@ class SearchUserFragment : Fragment() {
     }
 
     private fun initToolbar() {
-        binding.toolbar.populate(
-            toolbarType = CustomToolbar.ToolbarType.SEARCH,
-            onLeftIconClick = {
-                findNavController().popBackStack()
-            })
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
 }

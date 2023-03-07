@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.chatapp.R
 import com.example.chatapp.databinding.AllChatsFragmentLayoutBinding
-import com.example.chatapp.ui.views.CustomToolbar
 
 class AllChatsFragment : Fragment() {
 
@@ -33,14 +32,18 @@ class AllChatsFragment : Fragment() {
     }
 
     private fun initToolbar() {
-        binding.toolbar.populate(
-            toolbarType = CustomToolbar.ToolbarType.ALL_CHATS,
-            onLeftIconClick = {
-                findNavController().navigate(R.id.action_allChatsFragment_to_searchUserFragment)
-            },
-            onRightIconClick = {
-                findNavController().navigate(R.id.action_allChatsFragment_to_globalSettingsFragment)
-            })
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigate(R.id.action_allChatsFragment_to_searchUserFragment)
+        }
+        binding.toolbar.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.search -> {
+                    findNavController().navigate(R.id.action_allChatsFragment_to_globalSettingsFragment)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
 }
