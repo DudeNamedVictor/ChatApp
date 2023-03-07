@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/search"
+        android:id="@+id/settings"
         android:icon="@drawable/ic_baseline_settings_32"
         android:title="@string/settings"
         android:contentDescription="@string/settings"

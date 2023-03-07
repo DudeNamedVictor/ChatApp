@@ -37,7 +37,7 @@ class AllChatsFragment : Fragment() {
         }
         binding.toolbar.setOnMenuItemClickListener {
             when (it.itemId) {
-                R.id.search -> {
+                R.id.settings -> {
                     findNavController().navigate(R.id.action_allChatsFragment_to_globalSettingsFragment)
                     true
                 }
