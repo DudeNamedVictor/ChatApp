@@ -5,6 +5,7 @@
         <item name="android:textColorPrimary">@color/white</item>
         <item name="android:windowBackground">@color/white</item>
         <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="textViewColor">@color/black</item>
     </style>
 
     <style name="Theme.ChatAppRed" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
@@ -13,6 +14,7 @@
         <item name="android:textColorPrimary">@color/white</item>
         <item name="android:windowBackground">@color/white</item>
         <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="textViewColor">@color/black</item>
     </style>
 
     <style name="Theme.ChatAppGreen" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
@@ -21,6 +23,7 @@
         <item name="android:textColorPrimary">@color/white</item>
         <item name="android:windowBackground">@color/white</item>
         <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="textViewColor">@color/black</item>
     </style>
 
     <style name="Theme.ChatAppBlue" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
@@ -29,5 +32,6 @@
         <item name="android:textColorPrimary">@color/white</item>
         <item name="android:windowBackground">@color/white</item>
         <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="textViewColor">@color/black</item>
     </style>
 </resources>

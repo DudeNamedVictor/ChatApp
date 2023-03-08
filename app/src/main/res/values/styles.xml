@@ -2,6 +2,7 @@
 <resources>
     <style name="SettingsTextStyle">
         <item name="android:textSize">24sp</item>
+        <item name="android:textColor">?attr/textViewColor</item>
     </style>
 
     <style name="SettingsColorsStyle">
