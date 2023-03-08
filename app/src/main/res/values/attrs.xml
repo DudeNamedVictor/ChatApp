@@ -2,5 +2,7 @@
 <resources>
     <declare-styleable name="CustomTheme">
         <attr name="textViewColor" format="reference"/>
+        <attr name="allChatsSearch" format="reference"/>
+        <attr name="allChatsFab" format="reference"/>
     </declare-styleable>
 </resources>

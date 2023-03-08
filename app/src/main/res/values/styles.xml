@@ -5,6 +5,14 @@
         <item name="android:textColor">?attr/textViewColor</item>
     </style>
 
+    <style name="AllChatsStyle">
+        <item name="android:tint">?attr/allChatsSearch</item>
+    </style>
+
+    <style name="AllChatsFab">
+        <item name="android:backgroundTint">?attr/allChatsFab</item>
+    </style>
+
     <style name="SettingsColorsStyle">
         <item name="android:layout_width">32dp</item>
         <item name="android:layout_height">32dp</item>

@@ -6,5 +6,7 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <item name="android:navigationBarColor">@color/transparent</item>
         <item name="textViewColor">@color/white</item>
+        <item name="allChatsSearch">@color/white</item>
+        <item name="allChatsFab">@color/white</item>
     </style>
 </resources>

@@ -5,5 +5,7 @@
     <string name="all_chats">Все чаты</string>
     <string name="settings">Настройки</string>
     <string name="search">Поиск</string>
+    <string name="search_user">Найти пользователя</string>
+    <string name="search_chat">Найти чат</string>
     <string name="choose_theme">Выберите тему</string>
 </resources>

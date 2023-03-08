@@ -22,6 +22,7 @@ class AllChatsFragment : Fragment() {
     ): View {
         _binding = AllChatsFragmentLayoutBinding.inflate(inflater, container, false)
         initToolbar()
+        initViews()
 
         return binding.root
     }
@@ -32,9 +33,6 @@ class AllChatsFragment : Fragment() {
     }
 
     private fun initToolbar() {
-        binding.toolbar.setNavigationOnClickListener {
-            findNavController().navigate(R.id.action_allChatsFragment_to_searchUserFragment)
-        }
         binding.toolbar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.settings -> {
@@ -43,6 +41,12 @@ class AllChatsFragment : Fragment() {
                 }
                 else -> false
             }
+        }
+    }
+
+    private fun initViews() {
+        binding.addPeople.setOnClickListener {
+            findNavController().navigate(R.id.action_allChatsFragment_to_searchUserFragment)
         }
     }
 
