@@ -57,12 +57,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun changeTheme() {
-        if (sharedPreferences.getInt(KEY_THEME, -1) == R.style.Theme_ChatAppNight) {
+        if (sharedPreferences.getInt(
+                KEY_THEME,
+                R.style.Theme_ChatAppDefault
+            ) == R.style.Theme_ChatAppNight
+        ) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
-        setTheme(sharedPreferences.getInt(KEY_THEME, -1))
+        setTheme(sharedPreferences.getInt(KEY_THEME, R.style.Theme_ChatAppDefault))
     }
 
     private fun initNavigation() {
