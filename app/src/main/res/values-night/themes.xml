@@ -8,5 +8,6 @@
         <item name="textViewColor">@color/white</item>
         <item name="allChatsSearch">@color/white</item>
         <item name="allChatsFab">@color/white</item>
+        <item name="separatorColor">@color/white</item>
     </style>
 </resources>

@@ -4,5 +4,6 @@
         <attr name="textViewColor" format="reference"/>
         <attr name="allChatsSearch" format="reference"/>
         <attr name="allChatsFab" format="reference"/>
+        <attr name="separatorColor" format="reference"/>
     </declare-styleable>
 </resources>
