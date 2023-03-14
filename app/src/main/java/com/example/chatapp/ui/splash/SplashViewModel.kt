@@ -1,13 +1,12 @@
 package com.example.chatapp.ui.splash
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class SplashViewModel(application: Application) : AndroidViewModel(application) {
+class SplashViewModel : ViewModel() {
 
     val stateMLD: MutableLiveData<SplashScreenState> = MutableLiveData()
 
